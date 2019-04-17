@@ -14,6 +14,8 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.Objects;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity implements MainView {
 
     private TextView outputText;
