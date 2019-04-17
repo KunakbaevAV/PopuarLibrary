@@ -1,11 +1,12 @@
 package com.artmil.mygallery.view;
 
-import androidx.appcompat.app.AppCompatActivity;
+//import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.artmil.mygallery.R;
 import com.artmil.mygallery.presenter.MainPresenter;
 import com.google.android.material.button.MaterialButton;
