@@ -6,13 +6,13 @@ import com.artmil.mygallery.view.MainView;
 
 import java.util.ArrayList;
 
-public class PresenterLesson2 {
+public class PresenterLesson2_2 {
     private ArrayList<MyObserver> observers;
     private User user;
     private Forbs forbs;
     private MainView view;
 
-    public PresenterLesson2(MainView view) {
+    public PresenterLesson2_2(MainView view) {
         this.view = view;
         forbs = new Forbs();
         user = new User();
