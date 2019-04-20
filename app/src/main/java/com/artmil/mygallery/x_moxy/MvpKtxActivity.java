@@ -51,6 +51,7 @@ public abstract class MvpKtxActivity extends AppCompatActivity {
         }
     }
 
+
     /**
      * @return The {@link MvpDelegate} being used by this Activity.
      */

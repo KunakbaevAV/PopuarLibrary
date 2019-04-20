@@ -3,6 +3,7 @@ package com.artmil.mygallery.view;
 //import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends MvpKtxActivity implements MainView {
 
+    private static final String TAG = "my_tag";
     private TextView outputText;
     private TextInputEditText inputText;
 
@@ -50,10 +52,12 @@ public class MainActivity extends MvpKtxActivity implements MainView {
 
     public void buttonClick(View view) {
         mainPresenter.onButtonClick(Objects.requireNonNull(inputText.getText()).toString());
+//        Log.i(TAG, "buttonClick: " + inputText.getText());
     }
 
     @Override
     public void setText(String text) {
+        Log.i(TAG, "setText: " + text);
         outputText.setText(text);
     }
 }
