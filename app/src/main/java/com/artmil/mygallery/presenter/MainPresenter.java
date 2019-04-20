@@ -2,24 +2,23 @@ package com.artmil.mygallery.presenter;
 
 import android.util.Log;
 
-import com.arellomobile.mvp.InjectViewState;
-import com.arellomobile.mvp.MvpPresenter;
 import com.artmil.mygallery.model.Model;
 import com.artmil.mygallery.view.MainView;
 
-@InjectViewState
-public class MainPresenter extends MvpPresenter<MainView> {
+public class MainPresenter {
 
     private static final String TAG = "my_tag";
     private Model model;
+    private MainView view;
 
-    public MainPresenter() {
+    public MainPresenter(MainView view) {
         model = new Model();
+        this.view = view;
     }
 
     public void onButtonClick(String text) {
         model.addText(text);
-        getViewState().setText(model.getText());
+        view.setText(model.getText());
 //        Log.i(TAG, "onButtonClick: " + model.getText());
     }
 }

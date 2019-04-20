@@ -2,37 +2,26 @@ package com.artmil.mygallery.view;
 
 //import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.arellomobile.mvp.MvpAppCompatActivity;
-import com.arellomobile.mvp.presenter.InjectPresenter;
-import com.arellomobile.mvp.presenter.ProvidePresenter;
 import com.artmil.mygallery.R;
 import com.artmil.mygallery.presenter.MainPresenter;
-import com.artmil.mygallery.x_moxy.MvpKtxActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.Objects;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity extends MvpKtxActivity implements MainView {
+public class MainActivity extends Activity implements MainView {
 
     private static final String TAG = "my_tag";
     private TextView outputText;
     private TextInputEditText inputText;
 
-    @InjectPresenter
-    public MainPresenter mainPresenter;
-
-    @ProvidePresenter
-    public MainPresenter providePresenter() {
-        return new MainPresenter();
-    }
+    public MainPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,11 +36,11 @@ public class MainActivity extends MvpKtxActivity implements MainView {
         button.setOnClickListener(this::buttonClick);
         outputText = findViewById(R.id.text_output);
         inputText = findViewById(R.id.text_input);
-        mainPresenter = new MainPresenter();
+        presenter = new MainPresenter(this);
     }
 
     public void buttonClick(View view) {
-        mainPresenter.onButtonClick(Objects.requireNonNull(inputText.getText()).toString());
+        presenter.onButtonClick(Objects.requireNonNull(inputText.getText()).toString());
 //        Log.i(TAG, "buttonClick: " + inputText.getText());
     }
 
