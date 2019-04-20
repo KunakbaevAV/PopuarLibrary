@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyGallery</string>
+    <string name="app_name">Популярные библиотеки</string>
     <string name="hint">Напиши слово</string>
     <string name="press_button">Нажми кнопку</string>
     <string name="textview">Получишь результат</string>
