@@ -2,7 +2,6 @@ package com.artmil.mygallery.view;
 
 //import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
     private void initIU() {
         MaterialButton button = findViewById(R.id.button_input);
         button.setOnClickListener(this::buttonClick);
-        outputText = findViewById(R.id.text_output);
+        outputText = findViewById(R.id.text_output_3);
         inputText = findViewById(R.id.text_input);
         presenter = new MainPresenter(this);
     }

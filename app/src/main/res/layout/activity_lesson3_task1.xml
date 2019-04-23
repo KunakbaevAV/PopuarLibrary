@@ -4,49 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".lesson2.view.ActivityLesson2_2">
+    tools:context=".lesson3.view.ActivityLesson3Task1">
 
     <Button
         android:id="@+id/button_subscribe_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/subscribe"
-        app:layout_constraintBottom_toTopOf="@+id/button_unsubscribe_3"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_unsubscribe_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="4dp"
-        android:text="@string/unsubscribe"
-        app:layout_constraintBottom_toTopOf="@+id/button_spam"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/button_spam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/spam"
+        android:text="@string/unsubscribe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="24dp"
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/button_subscribe_3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,14 +46,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView_logs"
-                android:layout_width="wrap_content"
+                android:id="@+id/text_output_3"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="@string/messages" />
+                android:text="@string/messages"
+                android:textAlignment="center"
+                android:textSize="24sp" />
         </LinearLayout>
     </ScrollView>
 

@@ -27,10 +27,10 @@ public class ActivityLesson2_2 extends AppCompatActivity implements MainView {
     private void initUI() {
         presenter = new PresenterLesson2_2(this);
 
-        buttonSubcribe = findViewById(R.id.button_subscribe);
+        buttonSubcribe = findViewById(R.id.button_subscribe_3);
         buttonSubcribe.setOnClickListener(v -> presenter.pressSubscribe());
 
-        buttonUnsubcribe = findViewById(R.id.button_unsubscribe);
+        buttonUnsubcribe = findViewById(R.id.button_unsubscribe_3);
         buttonUnsubcribe.setOnClickListener(v -> presenter.pressUnsubscribe());
 
         buttonSpam = findViewById(R.id.button_spam);
