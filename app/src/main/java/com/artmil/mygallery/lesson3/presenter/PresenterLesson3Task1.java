@@ -14,7 +14,7 @@ public class PresenterLesson3Task1 {
     public PresenterLesson3Task1(MainView view) {
         this.view = view;
         MessagePresenter messagePresenter = new MessagePresenter();
-        observable = messagePresenter.getMessage();
+        observable = messagePresenter.getMessages();
     }
 
     public void subscribe() {

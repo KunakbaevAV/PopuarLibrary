@@ -30,7 +30,7 @@ public class ActivityLesson2_2 extends AppCompatActivity implements MainView {
         buttonSubcribe = findViewById(R.id.button_subscribe_3);
         buttonSubcribe.setOnClickListener(v -> presenter.pressSubscribe());
 
-        buttonUnsubcribe = findViewById(R.id.button_unsubscribe_3);
+        buttonUnsubcribe = findViewById(R.id.button_get_message);
         buttonUnsubcribe.setOnClickListener(v -> presenter.pressUnsubscribe());
 
         buttonSpam = findViewById(R.id.button_spam);

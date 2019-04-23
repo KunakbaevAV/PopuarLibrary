@@ -4,11 +4,13 @@ import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.Single;
+import io.reactivex.SingleOnSubscribe;
 import io.reactivex.schedulers.Schedulers;
 
 class MessagePresenter {
-    Observable<String> getMessage() {
 
+    Observable<String> getMessages() {
         return Observable.create((ObservableOnSubscribe<String>) emitter -> {
             try {
                 for (int i = 1; i < 30; i++) {
@@ -19,5 +21,10 @@ class MessagePresenter {
             } catch (InterruptedException ignored) {
             }
         }).subscribeOn(Schedulers.io());
+    }
+
+    Single<String> singleMessage() {
+        return Single.create((SingleOnSubscribe<String>)
+                emitter -> emitter.onSuccess("Сообщение")).subscribeOn(Schedulers.io());
     }
 }
