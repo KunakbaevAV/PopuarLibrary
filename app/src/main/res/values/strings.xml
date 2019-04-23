@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Популярные библиотеки</string>
+    <string name="hint">Напиши слово</string>
+    <string name="press_button">Нажми кнопку</string>
+    <string name="textview">Получишь результат</string>
+    <string name="subscribe">Подписаться</string>
+    <string name="unsubscribe">Отписаться</string>
+    <string name="spam">Спам</string>
+    <string name="messages">Сообщения</string>
+</resources>
