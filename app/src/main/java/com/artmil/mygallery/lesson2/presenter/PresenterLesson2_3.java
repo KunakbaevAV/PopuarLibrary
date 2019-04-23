@@ -28,7 +28,7 @@ public class PresenterLesson2_3 {
             @Override
             public void onSubscribe(Disposable d) {
                 Log.i(TAG, "onSubscribe: ");
-                PresenterLesson2_3.this.disposable = disposable; //Непонятно, для чего это?
+                PresenterLesson2_3.this.disposable = d;
             }
 
             @Override
@@ -51,7 +51,7 @@ public class PresenterLesson2_3 {
     }
 
     public void unsubscribe() {
-        view.setText("Ошибка");
-//        disposable.dispose(); //Тут выдает ошибку и вылетает
+        disposable.dispose();
+        view.setText("Произошла отписка");
     }
 }
