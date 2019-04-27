@@ -8,13 +8,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.artmil.mygallery.R;
-import com.artmil.mygallery.view.MainView;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class RetorfitActivity extends AppCompatActivity implements MainView {
+public class RetorfitActivity extends AppCompatActivity implements EditableActivity {
 
     @BindView(R.id.textViewLesson4_2)
     TextView textView;
@@ -38,7 +38,15 @@ public class RetorfitActivity extends AppCompatActivity implements MainView {
     }
 
     @Override
-    public void setText(String text) {
+    public void editText(String text) {
         textView.setText(text);
+    }
+
+    @Override
+    public void editImage(String url) {
+        Picasso
+                .get()
+                .load(url)
+                .into(imageAvatar);
     }
 }
