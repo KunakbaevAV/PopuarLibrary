@@ -7,4 +7,5 @@
     <string name="unsubscribe">Отписаться</string>
     <string name="spam">Спам</string>
     <string name="messages">Сообщения</string>
+    <string name="api">{"time_of_year": "summer", "year": 2019}</string>
 </resources>
