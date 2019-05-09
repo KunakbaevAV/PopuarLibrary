@@ -1,6 +1,6 @@
 package com.artmil.mygallery.lesson6;
 
-class White {
+public class White {
     Green green;
 
     White(Green green) {
