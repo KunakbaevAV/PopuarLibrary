@@ -13,51 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
-
-        <activity android:name=".lesson4.task2.RetorfitActivity">
+        <activity android:name=".lesson6.NoDiActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".lesson4.task2.RetorfitActivity">
 
+        </activity>
         <activity android:name=".lesson4.task1.GsonActivity">
-            <!--<intent-filter>
 
-            </intent-filter>-->
         </activity>
-
-        <!--<activity android:name=".lesson3.view.ActivityLesson3Task1">
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".lesson3.view.ActivityLesson3Task2">
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".lesson2.view.ActivityLesson3_3">
-            <intent-filter>
-
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".lesson2.view.ActivityLesson2_2">
-            <intent-filter>
-
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".view.MainActivity">
-            <intent-filter>
-
-            </intent-filter>
-        </activity>-->
-
     </application>
 
 </manifest>
