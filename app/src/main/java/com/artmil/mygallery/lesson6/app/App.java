@@ -12,9 +12,13 @@ public class App extends Application {
         appComponent = generateAppComponent();
     }
 
+    public static AppComponent getAppComponent() {
+        return appComponent;
+    }
+
     private AppComponent generateAppComponent() {
-        return DaggerAppComponent //Этот класс не генерируется
-                .buider()
+        return DaggerAppComponent
+                .builder()
                 .appModule(new AppModule(this))
                 .build();
     }
