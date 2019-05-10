@@ -1,0 +1,26 @@
+package com.artmil.mygallery.lesson6.app;
+
+import android.app.Application;
+
+import com.artmil.mygallery.lesson6.Green;
+
+import javax.inject.Singleton;
+
+import dagger.Module;
+import dagger.Provides;
+
+@Module
+public class AppModule {
+
+    private final Application application;
+
+    public AppModule(Application application) {
+        this.application = application;
+    }
+
+    @Singleton
+    @Provides
+    Green provideGreen() {
+        return new Green();
+    }
+}
